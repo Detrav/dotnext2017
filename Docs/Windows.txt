@@ -1,0 +1,15 @@
+﻿IE Sequrity setting for downloads
+
+https://git-scm.com/download/win
+
+Install with LFS
+
+http://www.oracle.com/technetwork/java/javase/downloads/index.html
+
+Install JDK 8 144
+
+http://www.microsoft.com/net/download/core
+
+Install Core 2.0 SDK 
+
+Restart
