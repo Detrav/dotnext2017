@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "JavaLogAnalyzer": {
+      "commandName": "Project",
+      "commandLineArgs": ""
+    }
+  }
+}

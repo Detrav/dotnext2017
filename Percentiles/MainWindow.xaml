@@ -1,0 +1,56 @@
+﻿<Window x:Class="Percentiles.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Percentiles"
+        xmlns:System="clr-namespace:System;assembly=mscorlib"
+        xmlns:chartingToolkit="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <ResourceDictionary>
+            <!--<Style x:Key="DisableLegendStyle" TargetType="{x:Type DV:Legend}">
+                <Setter Property="Width" Value="0"/>
+            </Style>-->
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="24px"/>
+            <RowDefinition />
+            <RowDefinition Height="24px"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100px"/>
+            <ColumnDefinition Width="5px"/>
+            <ColumnDefinition Width="180px"/>
+            <ColumnDefinition Width="5px"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Open" Click="btnOpen_Click"/>
+        <StackPanel Grid.Row="0" Grid.Column="2" Orientation="Horizontal">
+            <Label Content="Rows"/>
+            <ComboBox x:Name="cbRows" MinWidth="100" SelectedValue="1">
+                <System:String>1</System:String>
+                <System:String>2</System:String>
+                <System:String>3</System:String>
+                <System:String>4</System:String>
+                <System:String>5</System:String>
+                <System:String>6</System:String>
+            </ComboBox>
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="4" Orientation="Horizontal">
+            <CheckBox x:Name="cbThreads" Content="Threads" VerticalAlignment="Stretch" VerticalContentAlignment="Center"/>
+        </StackPanel>
+        <GridSplitter Grid.Row="1" Grid.Column="1" ResizeDirection="Columns" ResizeBehavior="PreviousAndNext" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <GridSplitter Grid.Row="1" Grid.Column="3" ResizeDirection="Columns" ResizeBehavior="PreviousAndNext" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <ListBox Grid.Row="1" Grid.Column="0" x:Name="lbFiles" SelectionMode="Single" SelectionChanged="lbFiles_SelectionChanged"/>
+        <ListBox Grid.Row="1" Grid.Column="2" x:Name="lbData" SelectionMode="Single" SelectionChanged="lbData_SelectionChanged"/>
+        <Grid Grid.Row="1" Grid.Column="4" x:Name="gMain">
+            
+        </Grid>
+        <Button Grid.Row="2" Grid.Column="0" Click="btnGetCSV_Click">Get CSV</Button>
+        <TextBox Grid.Row="2" Grid.Column="4" x:Name="tbValues">Core = , Java =</TextBox>
+    </Grid>
+</Window>
